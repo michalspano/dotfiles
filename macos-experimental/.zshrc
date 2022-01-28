@@ -27,18 +27,11 @@
 # ----- { Scripts } --------------------------------------------------------------------
 
 alias mails="./.scripts/mail.sh"
-alias compsci="source ~/.scripts/compsci.sh"
 alias tg="source ~/.scripts/telegram.sh"
-
 
 # ----- { Plugins } ---------------------------------------------------------------------
 
-plugins=(
-	git 
-	zsh-wakatime
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
+[ -f .env/.plugins ] && source .env/.plugins
 
 # ----- { Keybindings } -----------------------------------------------------------------
 

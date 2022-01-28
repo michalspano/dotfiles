@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# ----- { Plugings } ---------------------------------------------------------------------
+
+# Add plugins to the plugins array
+plugins=(
+	git 
+	zsh-wakatime
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+# ----- { Aliases } ---------------------------------------------------------------------
