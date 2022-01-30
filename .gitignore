@@ -1,0 +1,4 @@
+# Default `.gitignore`
+*DS_Store
+.vscode/
+docs/
