@@ -5,6 +5,12 @@ set encoding=utf-8
 set number relativenumber
 syntax enable
 
+" Indentation options
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
 " PLUG - Plugin manager
 
 call plug#begin('~/.vim/plugged')
