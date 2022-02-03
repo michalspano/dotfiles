@@ -1,29 +1,19 @@
 " Personal Dotfiles - @michalspano
 " ~/.config/nvim/init.vim
 
-set encoding=utf-8
-set number relativenumber
-syntax enable
+" Neovim base
+if filereadable(expand('~/.config/nvim/base.vim'))
+    source ~/.config/nvim/base.vim
+endif
 
-" Indentation options
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" ----- 8< ----- 8< ----- 8< ----- 8< -----
 
-" PLUG - Plugin manager
+" Neovim plugins via 'Plug'
+if filereadable(expand('~/.config/nvim/plugins.vim'))
+    source ~/.config/nvim/plugins.vim
+endif
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'arcticicestudio/nord-vim'
-Plug 'andweeb/presence.nvim'
-Plug 'karb94/neoscroll.nvim'
-Plug 'wakatime/vim-wakatime'
-
-call plug#end()
+" ----- 8< ----- 8< ----- 8< ----- 8< -----
 
 " Setup theme
 colorscheme nord
-
-" Setup smoothscroll
-lua require('neoscroll').setup()
