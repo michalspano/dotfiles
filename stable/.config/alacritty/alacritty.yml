@@ -34,6 +34,20 @@ background_opacity: 0.85
 
 # ---------------------------------------------------------------------------- #
 
+#   { CURSOR OPTIONS}    #
+cursor:
+
+  # Cursor style options
+  style:
+    shape: Beam
+    blinking: Always
+
+  blink_interval: 1000
+  unfocused_hollow: false  # Regular shape
+  thickness: 0.125
+
+# ---------------------------------------------------------------------------- #
+
 #   { KEYBINDINGS }    #
 # For macOS
 key_bindings:
