@@ -66,8 +66,8 @@ defaults write com.apple.dock showhidden -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# Set the icon size of Dock items 
+defaults write com.apple.dock tilesize -int 60 
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -87,3 +87,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 # Disable smart quotes as it’s annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+# desable spotlight and its indexing (we use Alfred as an alternative)
+sudo mdutil -a -i off
