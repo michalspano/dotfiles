@@ -37,5 +37,6 @@ alias dict="open /System/Applications/Dictionary.app"
 export obs="~/Library/Mobile Documents/iCloud~md~obsidian/Documents/"
 export icloud="~/Library/Mobile Documents/com~apple~CloudDocs"
 export ubersicht="~/Library/Application Support/Übersicht/widgets"
+export drive="/Volumes/GoogleDrive/My Drive/"
 
 # ----- { Aliases } ---------------------------------------------------------------------
