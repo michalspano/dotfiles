@@ -88,5 +88,3 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Disable smart quotes as it’s annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
-# desable spotlight and its indexing (we use Alfred as an alternative)
-sudo mdutil -a -i off
