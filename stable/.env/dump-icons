@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -d ~/Downloads ]; then
+  if [ -n "$(find ~/Downloads -name '*.icns')" ]; then
+    /bin/mv ~/Downloads/*.icns ~/.custom-icons/
+    exit 0
+  fi
+fi
+printf "No icons found in ~/Downloads\n"
+exit 1
