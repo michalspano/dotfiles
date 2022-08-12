@@ -3,6 +3,7 @@
 # --- { DEV Tools } ---  
 
 alias py="/usr/local/bin/python3"
+alias jl="/usr/local/bin/julia"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gh="open 'https://github.com/michalspano'"
 alias config="nvim ~/.zshrc"
