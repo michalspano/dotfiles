@@ -1,0 +1,80 @@
+# forked from https://gist.githubusercontent.com/digitaljhelms/3866785/raw/fda003f8730e0307027d1f7ef985c047b6bcb685/.gitconfig
+# @michalspano's version
+
+[user]
+	name = michalspano
+	email = michal.spano03@gmail.com
+[alias]
+	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/"\\x1b[1;34m" => "\\x1b[1;0m"/' | sort -u
+
+	s = status
+	c = commit
+	b = branch
+
+	br = !git branch | grep ^* | cut -d' ' -f2
+	ce = commit --allow-empty-message -m ''
+	cp = cherry-pick
+	ch = checkout
+	df = diff -C --color-words
+	pl = !git pull --rebase origin $(git cb)
+	ps = !git push origin $(git cb)
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+
+	who = shortlog -s --
+	cloner = clone --recursive
+	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	save = stash save -u
+	prune-all = !git remote | xargs -n 1 git remote prune
+	prune-local = !git branch --merged | grep -v master | grep -v dev | xargs -n 1 git branch -d
+	reset-tags = "!f() { git tag -l | xargs git tag -d; git fetch; }; f"
+
+	find = !sh -c 'git lg --grep="$@"'    					# search for a string in the commit message log
+	srch = !sh -c 'git grep "$@" $(git rev-list --all)'    	# search for a string in all commits
+	info = !sh -c 'git-info' -    							# requires https://github.com/gitbits/git-info
+
+	ri = rebase --interactive --autosquash --rebase-merges
+	fixup = !sh -c 'git commit --fixup=$1' -
+	squash = !sh -c 'git commit --squash=$1' -
+	delete-tag = "!f() { git tag -d $1; git push origin :refs/tags/$1; }; f"
+	submodule-list = !git ls-files --stage | grep 16000
+	oldest-ancestor = !zsh -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+[rerere]
+	enabled = true
+[core]
+	editor = nvim
+	ignorecase = false
+	excludesfile = ~/.gitignore_global
+[http]
+	postBuffer = 157286400
+[init]
+	defaultBranch = main
+[color]
+	ui = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = upstream
+  	autoSetupRemote = true
+[credential]
+	helper = osxkeychain
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[instaweb]
+	local = false
+	port = 8080
+	httpd = webrick
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[fetch]
+	prune = true
+
+# currently deprecated, but kept for reference
+# [dude]
+	# notify-command = growlnotify -n \"$app_name\" -s --image \"$ICON_PATH\" -m \"$DESCRIPTION\" \"$TITLE\"
+	# icon ~/.git-dude/github_32.png
+	# notify-command = osascript -e \"display notification \\\"$DESCRIPTION\\\" with title \\\"$TITLE\\\"\"
+	# notify-command = osascript -e \"display notification \\\"$DESCRIPTION\\\" with title \\\"$TITLE\\\" sound name \\\"Hero\\\"\"
