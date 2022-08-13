@@ -9,11 +9,6 @@ alias gh="open 'https://github.com/michalspano'"
 alias config="nvim ~/.zshrc"
 alias nvim-config="nvim ~/.config/nvim"
 
-# --- { JetBrains } --- | specific
-
-alias goland=""
-alias pycharm=""
-
 # --- { System } --- | specific
 
 alias sys-sleep=""  # TODO: add the sleep command
