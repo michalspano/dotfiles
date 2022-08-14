@@ -16,8 +16,8 @@
 	cp = cherry-pick
 	ch = checkout
 	df = diff -C --color-words
-	pl = !git pull --rebase origin $(git cb)
-	ps = !git push origin $(git cb)
+	pl = !git pull --rebase origin $(git br)
+	ps = !git push origin $(git br)
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 
 	who = shortlog -s --
