@@ -5,6 +5,7 @@
 alias py="/usr/local/bin/python3"
 alias jl="/usr/local/bin/julia"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs="git status" # ghostscript to gs
 alias gh="open 'https://github.com/michalspano'"
 alias config="nvim ~/.zshrc"
 alias nvim-config="nvim ~/.config/nvim"
