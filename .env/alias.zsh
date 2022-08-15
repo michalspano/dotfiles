@@ -4,11 +4,10 @@
 
 alias py="/usr/local/bin/python3"
 alias jl="/usr/local/bin/julia"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs="git status" # ghostscript to gs
 alias gh="open 'https://github.com/michalspano'"
-alias config="nvim ~/.zshrc"
-alias nvim-config="nvim ~/.config/nvim"
+alias config="nvim $HOME/.zshrc"
+alias nvim-config="nvim $HOME/.config/nvim"
+alias gs="git status" # ghostscript to gs
 
 # --- { System } --- | specific
 
@@ -20,7 +19,7 @@ alias icons-off="defaults write com.apple.finder CreateDesktop false && killall 
 # --- { Uebersicht } --- | specific
 
 alias ul-="ultralist"
-alias ubersicht-conf="cd /Users/michalspano/Library/Application\ Support/Übersicht/widgets"
+alias ubersicht-conf="cd $HOME/Library/Application\ Support/Übersicht/widgets"
 
 # --- { Personal Extensions } ---
 
@@ -31,9 +30,9 @@ alias dict="open /System/Applications/Dictionary.app"
 
 # --- { EXPORTS } ---
 
-export obs="~/Library/Mobile Documents/iCloud~md~obsidian/Documents/"
-export icloud="~/Library/Mobile Documents/com~apple~CloudDocs"
-export ubersicht="~/Library/Application Support/Übersicht/widgets"
+export obs="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/"
+export icloud="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+export ubersicht="$HOME/Library/Application Support/Übersicht/widgets"
 export drive="/Volumes/GoogleDrive/My Drive/"
 
 # ----- { Aliases } ---------------------------------------------------------------------
