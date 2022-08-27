@@ -15,6 +15,7 @@ alias sys-sleep=""  # TODO: add the sleep command
 alias sys-save="open -b com.apple.ScreenSaver.Engine"
 alias icons-on="defaults write com.apple.finder CreateDesktop true && killall Finder"
 alias icons-off="defaults write com.apple.finder CreateDesktop false && killall Finder"
+alias sys-new-desktop="osascript $HOME/.env/new_dekstop.scpt"
 
 # --- { Uebersicht } --- | specific
 
