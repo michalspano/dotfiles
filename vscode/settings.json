@@ -1,0 +1,111 @@
+{
+    "editor.fontSize": 18,
+    "editor.fontFamily": "JetBrains Mono",
+    "files.autoSave": "onFocusChange",
+    "workbench.productIconTheme": "fluent-icons",
+    "terminal.integrated.gpuAcceleration": "off",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.layoutControl.enabled": false,
+
+    "code-runner.runInTerminal": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "default"
+    },
+
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "workbench.editor.untitled.hint": "hidden",
+
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "workbench.editor.tabCloseButton": "off",    
+
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+
+    "editor.inlineSuggest.enabled": true,
+    "editor.find.cursorMoveOnType": false,
+    "editor.fontLigatures": true,
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.accessibilitySupport": "off",
+
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorBlinking": "phase",
+    "workbench.startupEditor": "none",
+
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+
+    "cSpell.userWords": [
+        "michalspano",
+        "Špano",
+        "Michal",
+        "Spano",
+        "Bratislava",
+        "Göteborg",
+        "Sverige"
+    ],
+    
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true,
+        "python": true,
+        "latex": true,
+        "json": false,
+        "typescript": true,
+        "java": true
+    },
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+
+    "discord.enabled": false,
+    "discord.largeImage": "Editing a {lang} file",
+    "discord.largeImageIdling": "Idle",
+    "discord.lowerDetailsEditing": "{git_repo_name} ",
+    "discord.detailsEditing": "Editing {file_name} at {git_branch}",
+
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+
+    "security.workspace.trust.startupPrompt": "never",
+
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.interval": 10000,
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.clip.width": null,
+    "markdown-pdf.clip.height": null,
+
+    "codesnap.containerPadding": "2.5em",
+    "codesnap.showLineNumbers": false,
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 30px",
+    "codesnap.backgroundColor": "#3B4150",
+
+    "go.toolsManagement.autoUpdate": true,
+
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "vscode.markdown-language-features"
+    },
+
+    "window.zoomLevel": 1
+}
+
