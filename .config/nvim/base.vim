@@ -17,6 +17,10 @@ set cursorcolumn
 set noswapfile
 set scrolloff=8
 
+set spelllang=en_us
+nnoremap <silent> <F3> :set spell!<CR>
+inoremap <silent> <F3> <C-O>:set spell!<CR>
+
 nmap <c-c> "+y
 vmap <c-c> "+y
 nmap <c-v> "+p
