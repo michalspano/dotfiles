@@ -1,0 +1,25 @@
+# custom theme for lazygit [lz] (nord/nordic theme)
+# ~/.config/lazigit/config.yml
+# https://github.com/jesseduffield/lazygit
+
+gui:
+  showIcons: true         # support nerd fonts icons
+  theme:
+    lightTheme: false 
+    activeBorderColor:
+      - '#8fbcbb'
+      - bold
+    inactiveBorderColor:
+      - '#eceff4'
+    optionsTextColor:
+      - '#2e3440'
+    selectedLineBgColor:
+      - '#5e81ac'         # set to `default` to have no background color
+    selectedRangeBgColor:
+      - '#81a1c1'
+    cherryPickedCommitBgColor:
+      - '#d08770'
+    cherryPickedCommitFgColor:
+      - '#b48ead'
+    unstagedChangesColor:
+      - '#bf616a'
