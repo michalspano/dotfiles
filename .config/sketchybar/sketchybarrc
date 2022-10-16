@@ -78,22 +78,46 @@ sketchybar --add item space_separator left                            \
 
 ##### Right Items #####
 
-sketchybar --add item clock right                        \
-           --set clock   update_freq=10                  \
-                         script="$PLUGIN_DIR/clock.sh"   \
-                                                         \
-           --add item battery right                      \
-           --set battery script="$PLUGIN_DIR/battery.sh" \
-                         update_freq=10                  \
-           --subscribe battery system_woke
+sketchybar --add item clock right                           \
+           --set clock   update_freq=10                     \
+                         script="$PLUGIN_DIR/clock.sh"      
+
+sketchybar --add item keyboard_source right                                                     \
+           --set keyboard_source script="$PLUGIN_DIR/keyboard.sh"                               \
+                         update_freq=10                                                         \
+                         click_script="open /System/Library/PreferencePanes/Keyboard.prefPane"  \
+           --subscribe keyboard_source system_woke                      
+
+sketchybar  --add item battery right                          \
+            --set battery script="$PLUGIN_DIR/battery.sh"     \
+                          update_freq=10                      \
+            --subscribe battery system_woke                  
 
 sketchybar --add item wifi right                              \
            --set wifi    script="bash $PLUGIN_DIR/wifi.sh"    \
                          background.padding_right=12          \
                          update_freq=5
 
-# Additional position (e.g. center) are available, see:
-# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
+sketchybar  --add item sound right                        \
+            --set sound   script="$PLUGIN_DIR/sound.sh"   \
+                          update_freq=5                   \
+                          icon.padding_left=7.5           \
+                          icon.color=0xff81a1c1          
+
+sketchybar  --add item ram_label right                                    \
+            --set ram_label label.font="Hack Nerd Font:Bold:6.0"          \
+                               label=RAM                                  \
+                               y_offset=6                                 \
+                               width=0                                    \
+                               click_script="open -a Activity\ Monitor"   \
+                                                                          \
+            --add item ram_percentage right                               \
+            --set ram_percentage label.font="Hack Nerd Font:Bold:10.0"    \
+                                    y_offset=-2                           \
+                                    update_freq=2.5                       \
+                                    script="$PLUGIN_DIR/ram.sh"
+
+# create a vertical line separator
 
 ##### Finalizing Setup #####
 sketchybar --update; echo "sketchybar configuration loaded.."
