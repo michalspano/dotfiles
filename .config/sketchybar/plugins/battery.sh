@@ -1,26 +1,38 @@
 #!/usr/bin/env sh
 
-PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
+BATT_PERCENT=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
 CHARGING=$(pmset -g batt | grep 'AC Power')
 
-if [ $PERCENTAGE = "" ]; then
+# Nordic Theme inspired colors
+GREEN=0xffa3be8c
+ORANGE=0xffd08770
+RED=0xffbf616a
+
+if [[ $CHARGING != "" ]]; then
+  ICON=""
+  sketchybar -m --set ${NAME} \
+    icon=$ICON \
+    icon.color=$GREEN \
+    label=$(printf "${BATT_PERCENT}%%")
   exit 0
 fi
 
-case ${PERCENTAGE} in
-  9[0-9]|100) ICON=""
-  ;;
-  [6-8][0-9]) ICON=""
-  ;;
-  [3-5][0-9]) ICON=""
-  ;;
-  [1-2][0-9]) ICON=""
-  ;;
-  *) ICON=""
+case ${BATT_PERCENT} in
+  100)    ICON="" && COLOR=$GREEN  ;;
+  9[0-9]) ICON="" && COLOR=$GREEN  ;;
+  8[0-9]) ICON="" && COLOR=$GREEN  ;;
+  7[0-9]) ICON="" && COLOR=$GREEN  ;;
+  6[0-9]) ICON="" && COLOR=$ORANGE ;;
+  5[0-9]) ICON="" && COLOR=$ORANGE ;;
+  4[0-9]) ICON="" && COLOR=$ORANGE ;;
+  3[0-9]) ICON="" && COLOR=$ORANGE ;;
+  2[0-9]) ICON="" && COLOR=$RED    ;;
+  1[0-9]) ICON="" && COLOR=$RED    ;;
+  [0-9])  ICON="" && COLOR=$RED    ;;
+  *) ICON=""
 esac
 
-if [[ $CHARGING != "" ]]; then
-  ICON=""
-fi
-
-sketchybar --set $NAME icon="$ICON" label="${PERCENTAGE}%"
+sketchybar -m --set ${NAME}\
+  icon=$ICON \
+  icon.color=$COLOR \
+  label=$(printf "${BATT_PERCENT}%%")
