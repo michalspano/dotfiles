@@ -22,11 +22,11 @@ case ${BATT_PERCENT} in
   9[0-9]) ICON="" && COLOR=$GREEN  ;;
   8[0-9]) ICON="" && COLOR=$GREEN  ;;
   7[0-9]) ICON="" && COLOR=$GREEN  ;;
-  6[0-9]) ICON="" && COLOR=$ORANGE ;;
-  5[0-9]) ICON="" && COLOR=$ORANGE ;;
+  6[0-9]) ICON="" && COLOR=$GREEN  ;;
+  5[0-9]) ICON="" && COLOR=$GREEN  ;;
   4[0-9]) ICON="" && COLOR=$ORANGE ;;
   3[0-9]) ICON="" && COLOR=$ORANGE ;;
-  2[0-9]) ICON="" && COLOR=$RED    ;;
+  2[0-9]) ICON="" && COLOR=$ORANGE ;;
   1[0-9]) ICON="" && COLOR=$RED    ;;
   [0-9])  ICON="" && COLOR=$RED    ;;
   *) ICON=""
