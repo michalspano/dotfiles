@@ -77,32 +77,47 @@ sketchybar --add item space_separator left                            \
            --subscribe window_title front_app_switched
 
 ##### Right Items #####
+# adjusting individual items with padding/offest
+# + custom Nord color palette
 
 sketchybar --add item clock right                           \
            --set clock   update_freq=10                     \
+                         icon=                             \
+                         icon.color=0xffb48ead              \
+                         icon.y_offset=1                    \
                          script="$PLUGIN_DIR/clock.sh"      
 
 sketchybar --add item keyboard_source right                                                     \
            --set keyboard_source script="$PLUGIN_DIR/keyboard.sh"                               \
                          update_freq=10                                                         \
+                         background.padding_right=6                                             \
                          click_script="open /System/Library/PreferencePanes/Keyboard.prefPane"  \
            --subscribe keyboard_source system_woke                      
 
 sketchybar  --add item battery right                          \
             --set battery script="$PLUGIN_DIR/battery.sh"     \
                           update_freq=10                      \
+                          background.padding_right=-5         \
+                          icon.padding_left=7.5               \
             --subscribe battery system_woke                  
 
 sketchybar --add item wifi right                              \
-           --set wifi    script="bash $PLUGIN_DIR/wifi.sh"    \
-                         background.padding_right=12          \
+           --set wifi    script="$PLUGIN_DIR/wifi.sh"         \
+                         background.padding_left=-6           \
                          update_freq=5
 
 sketchybar  --add item sound right                        \
             --set sound   script="$PLUGIN_DIR/sound.sh"   \
-                          update_freq=5                   \
-                          icon.padding_left=7.5           \
-                          icon.color=0xff81a1c1          
+                          icon.padding_left=10            \
+                          icon.color=0xff81a1c1           \
+                          update_freq=5                   
+
+sketchybar --add item weather right                       \
+           --set weather   update_freq=1800               \
+                           icon.color=0xffebcb8b          \
+                           icon.y_offset=1                \
+                           icon.padding_left=10           \
+                           script="$PLUGIN_DIR/weather.sh" 
 
 sketchybar  --add item ram_label right                                    \
             --set ram_label label.font="Hack Nerd Font:Bold:6.0"          \
@@ -116,8 +131,6 @@ sketchybar  --add item ram_label right                                    \
                                     y_offset=-2                           \
                                     update_freq=2.5                       \
                                     script="$PLUGIN_DIR/ram.sh"
-
-# create a vertical line separator
 
 ##### Finalizing Setup #####
 sketchybar --update; echo "sketchybar configuration loaded.."
