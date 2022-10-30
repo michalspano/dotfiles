@@ -27,6 +27,12 @@ elif [ -z "$DAY_COUNT" ]; then DAY_COUNT=""; fi # default 0 = today
 
 COMMAND="`icalBuddy -eep '*' -f -nc -sd eventsToday+${DAY_COUNT}`" # get events
 
+# some names are larger than the width of the terminal; trim them, such that
+# they fit within the terminal's width
+
+WIDTH=$(tput cols) # get the width of the current terminal session
+COMMAND=$(printf "$COMMAND" | sed -E "s/(.{${WIDTH}}).*/\1/") # trim
+
 case "$2" in
   -c|--cow)     printf "${COMMAND}\n" | boxes -d peek -a c -s 41x11 ;;
   -d|--diamond) printf "${COMMAND}\n" | boxes -d diamonds -a hcvc   ;;
