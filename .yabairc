@@ -1,0 +1,69 @@
+#!/usr/bin/env sh
+
+# --- { ~/.yabairc } ---
+# forked from https://github.com/koekeishiya/dotfiles/blob/master/yabai/yabairc
+
+# The following features of yabai require System Integrity Protection to be (partially) disabled:
+# Source: https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection
+# TODO: read about the disabling procedure
+# 
+# Therefore, the following features are not available
+#  - focus/move/swap/create/destroy space
+#  - remove window shadows
+#  - enable window transparency
+#  - enable window animations
+#  - control window layers (make windows appear topmost or on the desktop)
+#  - sticky windows (make windows appear on all spaces on the display that contains the window)
+#  - toggle picture-in-picture for any given window
+
+# Yabai requires scripting addition configuration. This has been implemented at:
+# /private/etc/sudoers.d/yabai
+# Source: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#updating-to-the-latest-release
+
+# Input the line below into the file you are editing.
+#  - replace <yabai> with the path to the yabai binary (output of: which yabai).
+#  - replace <user> with your username (output of: whoami). 
+#  - replace <hash> with the sha256 hash of the yabai binary (output of: shasum -a 256 $(which yabai)).
+#    this hash must be updated manually after running brew upgrade.
+# 
+# <user> ALL = (root) NOPASSWD: sha256:<hash> <yabai> --load-sa
+
+# initial configuration [required]
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"; sudo yabai --load-sa
+
+# global settings
+yabai -m config                                 \
+    mouse_follows_focus          off            \
+    focus_follows_mouse          off            \
+    window_origin_display        default        \
+    window_placement             second_child   \
+    window_topmost               off            \
+    window_shadow                on             \
+    window_animation_duration    0.25           \
+    window_opacity_duration      0.25           \
+    active_window_opacity        0.90           \
+    normal_window_opacity        0.50           \
+    window_opacity               on             \
+    insert_feedback_color        0xffd75f5f     \
+    active_window_border_color   0xff775759     \
+    normal_window_border_color   0xff555555     \
+    window_border_width          4              \
+    window_border_radius         10             \
+    window_border_blur           on             \
+    window_border_hidpi          on             \
+    window_border                off            \
+    split_ratio                  0.50           \
+    split_type                   auto           \
+    auto_balance                 off            \
+    top_padding                  12             \
+    bottom_padding               12             \
+    left_padding                 12             \
+    right_padding                12             \
+    window_gap                   06             \
+    layout                       bsp            \
+    mouse_modifier               fn             \
+    mouse_action1                move           \
+    mouse_action2                resize         \
+    mouse_drop_action            swap
+
+echo "yabai configuration loaded.."
