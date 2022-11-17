@@ -7,6 +7,28 @@
 2. [`experimental`](https://github.com/michalspano/.dotfiles/tree/experimental) [ `WIP` ]
 3. [`bookmarks`](https://github.com/michalspano/.dotfiles/tree/bookmarks)       [ `OK`  ]
 
+## Previews
+
+### `~/.config/*`
+
+|            name            |                 preview                 |
+|:--------------------------:|:---------------------------------------:|
+|  [`alacritty`][alacritty]  |  ![alacritty-demo](docs/alacritty.png)  |
+|    [`lazygit`][lazygit]     |    ![lazygit-demo](docs/lazygit.png)    |
+|       [`nvim`][nvim]       |       ![nvim-demo](docs/nvim.png)       |
+| [`sketchybar`][sketchybar] | ![sketchybar-demo](docs/sketchybar.png) |
+|   [`spotify`][spicetify]   |    ![spotify-demo](docs/spotify.png)    |
+
+<!-- links -->
+
+[alacritty]: https://github.com/alacritty/alacritty
+[lazygit]: https://github.com/jesseduffield/lazygit
+[nvim]: https://github.com/neovim/neovim
+[sketchybar]: https://github.com/FelixKratz/SketchyBar
+[spicetify]: https://spicetify.app/
+
+<!-- TODO: add the missing directories -->
+
 ## Notes
 
 Here I write some __notes__ that I consider important for the understanding of these `dotfiles`.
