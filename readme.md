@@ -14,7 +14,7 @@
 |            name            |                 preview                 |
 |:--------------------------:|:---------------------------------------:|
 |  [`alacritty`][alacritty]  |  ![alacritty-demo](docs/alacritty.png)  |
-|    [`lazygit`][lazygit]     |    ![lazygit-demo](docs/lazygit.png)    |
+|    [`lazygit`][lazygit]    |    ![lazygit-demo](docs/lazygit.png)    |
 |       [`nvim`][nvim]       |       ![nvim-demo](docs/nvim.png)       |
 | [`sketchybar`][sketchybar] | ![sketchybar-demo](docs/sketchybar.png) |
 |   [`spotify`][spicetify]   |    ![spotify-demo](docs/spotify.png)    |
@@ -27,7 +27,19 @@
 [sketchybar]: https://github.com/FelixKratz/SketchyBar
 [spicetify]: https://spicetify.app/
 
-<!-- TODO: add the missing directories -->
+### Others
+
+|        name        |             preview             |
+|:------------------:|:-------------------------------:|
+|   [`idle`][idle]   |  ![idle-demo](docs/idlerc.png)  |
+|   [`tmux`][tmux]   |   ![tmux-demo](docs/tmux.png)   |
+| [`iterm2`][iterm2] | ![iterm2-demo](docs/iterm2.png) |
+
+<!-- links -->
+
+[idle]: https://docs.python.org/3/library/idle.html
+[tmux]: https://github.com/tmux/tmux
+[iterm2]: https://github.com/gnachman/iTerm2
 
 ## Notes
 
