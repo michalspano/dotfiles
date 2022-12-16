@@ -1,0 +1,61 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Fork by @michalspano - Nordic Theme with macOS shortcuts
+# Based on: https://github.com/arcticicestudio/nord-alacritty
+
+# ---------------------------------------------------------------------------- #
+
+#   { COLORS }    #
+import:
+  - ~/.config/alacritty/themes/colors/nord-color.yml
+
+#   { WINDOW }    #
+window:
+  padding:
+    x: 25
+    y: 25
+  decorations: buttonless
+
+#   { FONT }      #
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  size: 25
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: true
+
+background_opacity: 1
+
+# ---------------------------------------------------------------------------- #
+
+#   { CURSOR OPTIONS}    #
+cursor:
+
+  # Cursor style options
+  style:
+    shape: Block
+    blinking: Always
+
+  blink_interval: 1000
+  unfocused_hollow: false  # Regular shape
+  thickness: 0.125
+
+# ---------------------------------------------------------------------------- #
+
+#   { KEYBINDINGS }    #
+# For macOS
+key_bindings:
+  - { key: Comma,     mods: Command,      command: {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}}
+  - { key: N,         mods: Command,      action: SpawnNewInstance             } 
+  - { key: Space,     mods: Alt,          chars: " "                           }
+  - { key: Back,      mods: Super,        chars: "\x15"                        } # delete word/line
+  - { key: Left,      mods: Alt,          chars: "\x1bb"                       } # one word left
+  - { key: Right,     mods: Alt,          chars: "\x1bf"                       } # one word right
+  - { key: Left,      mods: Command,      chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,     mods: Command,      chars: "\x1bOF",   mode: AppCursor   } # End
+
+draw_bold_text_with_bright_colors: true
+
+# EOF------------------------------------------------------------------------- #
