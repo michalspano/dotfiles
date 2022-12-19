@@ -3,6 +3,11 @@
 
 # ---------------------------------------------------------------------------- #
 
+#   { COLORS }    #
+# Colors (default)
+import:
+  - "~/.config/alacritty/themes/colors/default-color.yml"
+
 #   { WINDOW }    #
 window:
   padding:
@@ -15,7 +20,7 @@ font:
   normal:
     family: JetBrainsMono Nerd Font
     style: Regular
-  size: 18
+  size: 25
   glyph_offset:
     x: 0
     y: 0
@@ -30,7 +35,7 @@ cursor:
 
   # Cursor style options
   style:
-    shape: Beam
+    shape: Block
     blinking: Always
 
   blink_interval: 1000
@@ -52,32 +57,5 @@ key_bindings:
   - { key: Right,     mods: Command,      chars: "\x1bOF",   mode: AppCursor   } # End
 
 draw_bold_text_with_bright_colors: true
-
-# ---------------------------------------------------------------------------- #
-
-#   { COLORS }    #
-# https://www.nordtheme.com/
-colors:
-  primary:
-    background: '#1A212E'
-    foreground: '#abb2bf'
-  normal:
-    black: '#2E3440'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#5E81AC'
-    magenta: '#B48EAD'
-    cyan: '#56b6c2'
-    white: '#ECEFF4'
-  bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#81A1C1'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#fffff0'
 
 # EOF------------------------------------------------------------------------- #
