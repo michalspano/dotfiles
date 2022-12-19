@@ -64,6 +64,10 @@ alias sps="spotify status"                                          # show curre
 alias spn="spotify next"                                            # play next song
 alias spp="spotify play"                                            # play song
 
+# alacritty theme switcher
+alias al-sw="$HOME/.env/alacritty-theme.sh"                         # alacritty theme switcher
+
+
 # --- { EXPORTS } --- | system specific
 
 export obs="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/"
