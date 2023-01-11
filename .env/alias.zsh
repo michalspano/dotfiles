@@ -67,6 +67,8 @@ alias spp="spotify play"                                            # play song
 # alacritty theme switcher
 alias al-sw="$HOME/.env/alacritty-theme.sh"                         # alacritty theme switcher
 
+# custom stopwatch utility
+alias stopwatch="$HOME/.env/stopwatch.sh"                           # stopwatch
 
 # --- { EXPORTS } --- | system specific
 
