@@ -1,0 +1,62 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Some Class}\\Some Example}
+\author{\huge{Name Surname}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{}
+\section{This is a section}
+
+	% Definition
+	\dfn{Definition's title}{This is a definition.}
+
+	% Question
+	\qs{Question's title}{This is a question.}
+
+	% Note
+	\nt{This is a note.}
+
+	% Claim
+	\clm{Claim's title}{}{This is a claim.}
+
+	% Example
+	\ex{Example's title}{This is an example.}
+
+	% Theorem
+	\thm{Theorem's title}{This is a theorem.}
+	
+	% Corollary
+	\cor{Corollary's title}{This is a corollary.}
+	
+	% Lemma
+	\mlenma{Lemma's title}{This is a lemma.}
+	
+	% Proposition
+	\mprop{Proposition's title}{This is a proposition.}
+	
+	% Multi-step proof
+	\begin{myproof}
+		This is a multi-step proof.
+		\[...\]
+	\end{myproof}
+
+	% Simple proof
+	\pf{Proof's name}{This is a simple proof.}
+
+	% Solution
+	\sol{This is a solution.}
+
+\end{document}
