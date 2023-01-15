@@ -22,6 +22,9 @@ Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'ellisonleao/glow.nvim'
+Plug 'dylanaraps/fff.vim'
+Plug 'lervag/vimtex'
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
@@ -48,4 +51,9 @@ endif
 " vim-airline
 if filereadable(expand('~/.config/nvim/plugins/airline.vim'))
     source ~/.config/nvim/plugins/airline.vim
+endif
+
+" vim-tex
+if filereadable(expand('~/.config/nvim/plugins/vimtex.vim'))
+    source ~/.config/nvim/plugins/vimtex.vim
 endif
