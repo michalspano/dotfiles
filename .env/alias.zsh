@@ -10,6 +10,8 @@ USER_LOCATION="Göteborg"                                            # User loca
 alias py="/usr/local/bin/python3"
 alias jl="/usr/local/bin/julia"
 
+alias tex-template="$HOME/.env/init_latex_template.sh"              # Install personal LaTeX template
+
 alias gh="open 'https://github.com/${GH_PROFILE}'"                  # open github profile
 
 alias lz="lazygit"                                                  # lazygit to lz
