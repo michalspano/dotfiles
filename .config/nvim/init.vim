@@ -8,6 +8,13 @@ endif
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
+"" Neovim macros
+if filereadable(expand('~/.config/nvim/macros.vim'))
+    source ~/.config/nvim/macros.vim
+endif
+
+" ----- 8< ----- 8< ----- 8< ----- 8< -----
+
 " Neovim plugins via 'Plug'
 if filereadable(expand('~/.config/nvim/plugins.vim'))
     source ~/.config/nvim/plugins.vim
