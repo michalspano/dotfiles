@@ -26,3 +26,6 @@ set scroll-step 100
 set zoom-min 10
 set guioptions ""
 
+# default window size
+set window-width 900
+set window-height 1100
