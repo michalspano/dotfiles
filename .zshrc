@@ -38,7 +38,18 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey -s '^E' 'exit\n'
 
-export LANG=en_US.UTF-8
-export PATH=$PATH:/Users/michalspano/.spicetify
+# --- { export } ---
+
 export PATH="/usr/local/sbin:$PATH"
-export XDG_CONFIG_HOME="$HOME/.config" # load lazygit config
+export PATH="$PATH:/Users/michalspano/.bin"
+
+export LANG=en_US.UTF-8
+export PATH=$PATH:/Users/michalspano/.spicetify # spicetify config
+export XDG_CONFIG_HOME="$HOME/.config"          # load lazygit config
+
+export JAVA_HOME=$(/usr/libexec/java_home)      # java Home dir 
+export PATH="/usr/local/opt/mongodb-community@4.4/bin:$PATH"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+export GEM_HOME="/Users/michalspano/.gem"       # ruby gems
+export NVIM="$HOME/.config/nvim/init.vim"       # neovim init file
