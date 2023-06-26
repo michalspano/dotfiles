@@ -112,12 +112,14 @@ sketchybar  --add item sound right                        \
                           icon.color=0xff81a1c1           \
                           update_freq=5                   
 
-sketchybar --add item weather right                       \
-           --set weather   update_freq=1800               \
-                           icon.color=0xffebcb8b          \
-                           icon.y_offset=1                \
-                           icon.padding_left=10           \
-                           script="$PLUGIN_DIR/weather.sh" 
+# TODO: improve the weather plugin; the issue is described in the
+# following GitHub issue: https://github.com/michalspano/.dotfiles/issues/10
+# sketchybar --add item weather right                       \
+#            --set weather   update_freq=1800               \
+#                            icon.color=0xffebcb8b          \
+#                            icon.y_offset=1                \
+#                            icon.padding_left=10           \
+#                            script="$PLUGIN_DIR/weather.sh" 
 
 sketchybar  --add item ram_label right                                    \
             --set ram_label label.font="Hack Nerd Font:Bold:6.0"          \
