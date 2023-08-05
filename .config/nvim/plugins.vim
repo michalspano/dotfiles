@@ -25,6 +25,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'ellisonleao/glow.nvim'
 Plug 'dylanaraps/fff.vim'
 Plug 'lervag/vimtex'
+Plug 'kwakzalver/duckytype.nvim'
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
@@ -32,6 +33,9 @@ call plug#end()
 
 " NeoScroll
 lua require('neoscroll').setup()
+
+" DuckyType
+lua require('duckytype').setup{}
 
 " nerdtree
 if filereadable(expand('~/.config/nvim/plugins/nerd-tree.vim'))
@@ -57,3 +61,14 @@ endif
 if filereadable(expand('~/.config/nvim/plugins/vimtex.vim'))
     source ~/.config/nvim/plugins/vimtex.vim
 endif
+
+" vim-coc
+if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
+    source ~/.config/nvim/plugins/coc.vim
+endif
+
+" vim-copilot
+if filereadable(expand('~/.config/nvim/plugins/copilot.vim'))
+    source ~/.config/nvim/plugins/copilot.vim
+endif
+
