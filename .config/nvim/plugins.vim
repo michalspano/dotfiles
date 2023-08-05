@@ -26,6 +26,9 @@ Plug 'ellisonleao/glow.nvim'
 Plug 'dylanaraps/fff.vim'
 Plug 'lervag/vimtex'
 Plug 'kwakzalver/duckytype.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
@@ -71,4 +74,10 @@ endif
 if filereadable(expand('~/.config/nvim/plugins/copilot.vim'))
     source ~/.config/nvim/plugins/copilot.vim
 endif
+
+" nvim-telescope
+if filereadable(expand('~/.config/nvim/plugins/telescope.vim'))
+    source ~/.config/nvim/plugins/telescope.vim
+endif
+
 
