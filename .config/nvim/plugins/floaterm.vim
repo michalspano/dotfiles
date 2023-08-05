@@ -1,7 +1,7 @@
 let g:airline_theme='nord'
 
-nnoremap   <silent>   <F2>   :FloatermToggle<CR>
-tnoremap   <silent>   <F2>   <C-\><C-n>:FloatermToggle<CR>
+nnoremap   <silent>   <F1>   :FloatermToggle<CR>
+tnoremap   <silent>   <F1>   <C-\><C-n>:FloatermToggle<CR>
 
 let g:floaterm_title='floaterm($1|$2)'
 let g:floaterm_wintype='split'
