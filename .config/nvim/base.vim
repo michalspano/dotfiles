@@ -15,6 +15,13 @@ set cursorline
 set cursorcolumn
 
 set noswapfile
+
+" related to coc.vim config
+set nobackup
+set nowritebackup
+set signcolumn=yes
+
 set scrolloff=8
 
 set spelllang=en_us
+
