@@ -1,6 +1,20 @@
 " Configuration for copilot.vim
 " Docs: https://github.com/github/copilot.vim/blob/release/doc/copilot.txt
 
+" A helper function to toggle copilot on/off
+function CopilotToggle()
+  if exists('g:copilot_enabled') && g:copilot_enabled
+    let g:copilot_enabled = v:false
+    echo "Copilot disabled"
+  else
+    let g:copilot_enabled = v:true
+    echo "Copilot enabled"
+  endif
+endfunction
+
+" Map <F12> to toggle copilot on/off
+nnoremap <silent><script> <F12> :call CopilotToggle()<CR>
+
 " Map Modifier<OPT>-Tab to accept the current suggestion
 " <(S)-Tab> is already mapped to CocNext/Previous
 
