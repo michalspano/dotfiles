@@ -19,7 +19,7 @@ nnoremap <silent><script> <F12> :call CopilotToggle()<CR>
 " <(S)-Tab> is already mapped to CocNext/Previous
 
 imap <silent><script><expr> <M-Tab> copilot#Accept("\<CR>")
-"let g:copilot_no_tab_map = v:true
+let g:copilot_no_tab_map = v:true
 
 " Which files should have the copilot completion on/off
 " All files are on by default.
