@@ -4,7 +4,9 @@
 set encoding=utf-8
 set number relativenumber
 set fileformat=unix
+
 syntax enable
+filetype plugin indent on
 
 set expandtab
 set tabstop=2
