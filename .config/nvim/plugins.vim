@@ -29,6 +29,7 @@ Plug 'kwakzalver/duckytype.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'neovimhaskell/haskell-vim'
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
