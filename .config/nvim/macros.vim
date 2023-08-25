@@ -20,3 +20,7 @@ nnoremap <F3> :silent !pandoc -s % -o /tmp/%:t:r.pdf<CR>
 
 " Open current in zathura (needs to be exported via <F5> first)
 nnoremap <F4> :silent !zathura /tmp/%:t:r.pdf &>/dev/null &<CR>
+
+" Map C-h, C-l to navigate between tabs
+nnoremap <c-h> :tabprevious<CR>
+nnoremap <c-l> :tabnext<CR>
