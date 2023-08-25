@@ -1,3 +1,5 @@
 # Default `.gitignore`
 *DS_Store
 .vscode/
+.config/nvim/spell
+.config/lazygit/state.yml
