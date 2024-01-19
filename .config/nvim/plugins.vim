@@ -1,6 +1,6 @@
 " ~/.config/nvim/plugins.vim
 
-" List of all plugins of 'Plug'
+" List of all plugins via 'Plug'
 
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
@@ -8,22 +8,19 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'andweeb/presence.nvim'
-Plug 'karb94/neoscroll.nvim'
 Plug 'wakatime/vim-wakatime'
 Plug 'github/copilot.vim'
-Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/ryanoasis/vim-devicons' 
 Plug 'voldikss/vim-floaterm'
-Plug 'https://github.com/preservim/tagbar' 
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ellisonleao/glow.nvim'
-Plug 'dylanaraps/fff.vim'
 Plug 'lervag/vimtex'
 Plug 'kwakzalver/duckytype.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -34,9 +31,6 @@ Plug 'neovimhaskell/haskell-vim'
 " ----- 8< ----- 8< ----- 8< ----- 8< -----
 
 call plug#end()
-
-" NeoScroll
-lua require('neoscroll').setup()
 
 " DuckyType
 lua require('duckytype').setup{}
@@ -80,5 +74,3 @@ endif
 if filereadable(expand('~/.config/nvim/plugins/telescope.vim'))
     source ~/.config/nvim/plugins/telescope.vim
 endif
-
-
