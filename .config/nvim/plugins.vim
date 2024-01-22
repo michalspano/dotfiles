@@ -6,7 +6,7 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim'
 Plug 'andweeb/presence.nvim'
 Plug 'wakatime/vim-wakatime'
 Plug 'github/copilot.vim'
