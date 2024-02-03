@@ -1,10 +1,11 @@
-# ----- { ~/.zshrc } ---------------------------------------------------------------------
+# ----- { ~/.zshrc } -----------------------------------------------------------
 
 # --- { Oh my zsh } ---
 
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Currently, all themes are disabled, and custom themes are used instead.
 # ZSH_THEME="gentoo"
 
 zstyle ':omz:update' mode auto
@@ -14,42 +15,22 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # --- { zsh Plugins } ---
 plugins=(
-    git
-    wakatime
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    git                     # Additional git functionality
+    vi-mode                 # Extended VI mode
+    wakatime                # Personal programming statistics
+    zsh-autosuggestions     # Additional suggestions based on ZSH history
+    zsh-syntax-highlighting # Syntax (shell) highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh # Initialize OMZ
 
-# --- { aliases } ---
-[ -f ~/.env/alias.zsh ] && source ~/.env/alias.zsh
+# Load aliases, exports
+[ -f ~/.env/alias.zsh   ] && source ~/.env/alias.zsh
+[ -f ~/.env/exports.zsh ] && source ~/.env/exports.zsh
 
-# --- { command prompt } ---
-[ -f ~/.env/prompt.zsh ] && source ~/.env/prompt.zsh
+# Load env prompt, VI mode and tmux configurations.
+[ -f ~/.env/prompt.zsh  ] && source ~/.env/prompt.zsh
+[ -f ~/.env/vi-mode.zsh ] && source ~/.env/vi-mode.zsh
+[ -f ~/.env/tmux.zsh    ] && source ~/.env/tmux.zsh
 
-# --- { tmux } ---
-[ -f ~/.env/tmux.zsh ] && source ~/.env/tmux.zsh
-
-# --- { bun } ---
-[ -f ~/.env/bun.zsh ] && source ~/.env/bun.zsh
-
-# --- { general } ---
-
-bindkey -s '^E' 'exit\n'
-
-# --- { export } ---
-
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:/Users/michalspano/.bin"
-
-export LANG=en_US.UTF-8
-export PATH=$PATH:/Users/michalspano/.spicetify # spicetify config
-export XDG_CONFIG_HOME="$HOME/.config"          # load lazygit config
-
-export JAVA_HOME=$(/usr/libexec/java_home)      # java Home dir 
-export PATH="/usr/local/opt/mongodb-community@4.4/bin:$PATH"
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
-export GEM_HOME="/Users/michalspano/.gem"       # ruby gems
-export NVIM="$HOME/.config/nvim/init.vim"       # neovim init file
+# ----- { ~/.zshrc } -----------------------------------------------------------
