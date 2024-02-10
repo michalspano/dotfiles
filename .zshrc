@@ -25,12 +25,12 @@ plugins=(
 source $ZSH/oh-my-zsh.sh # Initialize OMZ
 
 # Load aliases, exports
-[ -f ~/.env/alias.zsh   ] && source ~/.env/alias.zsh
-[ -f ~/.env/exports.zsh ] && source ~/.env/exports.zsh
+[ -f ~/.custom/zsh/alias.zsh   ] && source ~/.custom/zsh/alias.zsh
+[ -f ~/.custom/zsh/exports.zsh ] && source ~/.custom/zsh/exports.zsh
 
-# Load env prompt, VI mode and tmux configurations.
-[ -f ~/.env/prompt.zsh  ] && source ~/.env/prompt.zsh
-[ -f ~/.env/vi-mode.zsh ] && source ~/.env/vi-mode.zsh
-[ -f ~/.env/tmux.zsh    ] && source ~/.env/tmux.zsh
+# Load custom prompt, VI mode and tmux configurations.
+[ -f ~/.custom/zsh/prompt.zsh  ] && source ~/.custom/zsh/prompt.zsh
+[ -f ~/.custom/zsh/vi-mode.zsh ] && source ~/.custom/zsh/vi-mode.zsh
+[ -f ~/.custom/zsh/tmux.zsh    ] && source ~/.custom/zsh/tmux.zsh
 
 # ----- { ~/.zshrc } -----------------------------------------------------------
