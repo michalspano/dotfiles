@@ -1,7 +1,8 @@
 #/bin/sh
 
 OUT_DIR="$1"
-LATEX_TEMPLATE_SOURCE="$HOME/personal-latex-template/"
+# TODO: make this script work with other Latex templates
+LATEX_TEMPLATE_SOURCE="$HOME/Personal/writing-templates/tex/mathematics"
 
 __verify_latex_source() {
     if [ ! -d "$LATEX_TEMPLATE_SOURCE" ]; then
