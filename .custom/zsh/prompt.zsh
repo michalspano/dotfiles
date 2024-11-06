@@ -1,4 +1,4 @@
-# ----- { Prompt } ---------------------------------------------------------------------
+## ========================================================================== ##
 
 # Initialize VCS information
 autoload -Uz vcs_info
@@ -20,3 +20,5 @@ ARROW_PROMPT="%F{cyan}${ARROW}%f"                           # Display an arrow t
 # Export the final prompt. Reuse the previous elements and add the VCS
 # information in `cyan` (at the end).
 PROMPT='${SYMBOL_OR_ERROR} ${RELATIVE_PATH} ${ARROW_PROMPT} %F{cyan}${vcs_info_msg_0_}%f'
+
+## ========================================================================== ##

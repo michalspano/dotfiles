@@ -1,5 +1,6 @@
-# This configuration is based on https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode.
-# Enable different types of cursors, and set the types.
+## ========================================================================== ##
+#  https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode.
+
 VI_MODE_SET_CURSOR=true
 
 VI_MODE_CURSOR_NORMAL=2 # Solid block
@@ -14,3 +15,5 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 # Use white for NORMAL, green for INSERT.
 MODE_INDICATOR="%F{white}[N]%f"
 INSERT_MODE_INDICATOR="%F{green}[I]%f"
+
+## ========================================================================== ##
