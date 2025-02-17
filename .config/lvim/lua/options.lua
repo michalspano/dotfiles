@@ -1,0 +1,1 @@
+/Users/michalspano/.config/lvim/lua/config/options.lua

@@ -1,0 +1,1 @@
+/Users/michalspano/.config/lvim/init.lua
