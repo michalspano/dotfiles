@@ -44,28 +44,28 @@ window-max-count: 0
 window-minimum-height: 0
 
 # The smallest width that a window can be sized to regardless of its layout frame (in px, default 0)
-window-minimum-width: 600
+window-minimum-width: 300
 
 # Boolean flag for whether or not to add margins between windows (default false).
 window-margins: true
 
 # Padding to apply between windows and the left edge of the screen (in px, default 0).
-screen-padding-left: 0
+screen-padding-left: 2
 
 # Padding to apply between windows and the right edge of the screen (in px, default 0).
-screen-padding-right: 0
+screen-padding-right: 2
 
 # Padding to apply between windows and the top edge of the screen (in px, default 0).
-screen-padding-top: 45 # the MacBook's notch =)
+screen-padding-top: 48 # the MacBook's notch =)
 
 # Padding to apply between windows and the bottom edge of the screen (in px, default 0).
-screen-padding-bottom: 0
+screen-padding-bottom: 2
 
 # true to display the name of the layout when a new layout is selected (default true).
-enables-layout-hud: true
+enables-layout-hud: false
 
 # true to display the name of the layout when moving to a new space (default true).
-enables-layout-hud-on-space-change: true
+enables-layout-hud-on-space-change: false
 
 # ===== LAYOUTS ===== #
 
@@ -78,7 +78,6 @@ window-resize-step: 5
 # layouts - Ordered list of layouts to use by layout key (default tall, wide, fullscreen, and column).
 layouts:
   - tall
-  - wide
   - fullscreen
   - column
   - row
@@ -101,15 +100,15 @@ layouts:
 
 mod1:
   - option
-  - shift
-  # - control
+  # - shift
+  - control
   # - command
 
 mod2:
-  - option
-  - shift
+  # - option
+  # - shift
   - control
-  # - command
+  - command
 
 # mod3, mod4 are not used by default (but can be used for custom commands)
 
@@ -169,13 +168,13 @@ focus-main:
 
 # Focus the next screen in the list going counter-clockwise.
 focus-screen-ccw:
-  mod: mod1
-  key: p
+  mod: mod2
+  key: k
 
 # Focus the next screen in the list going clockwise.
 focus-screen-cw:
-  mod: mod1
-  key: n
+  mod: mod2
+  key: j
 
 # Move the currently focused window onto the next screen in the list going counter-clockwise.
 swap-screen-ccw:
@@ -220,22 +219,25 @@ swap-main:
 # Select tall layout
 select-tall-layout:
   mod: mod1
-  key: a
-
-# Select wide layout
-select-wide-layout:
-  mod: mod1
-  key: s
+  key: '1'
 
 # Select fullscreen layout
 select-fullscreen-layout:
   mod: mod1
-  key: d
+  key: '2'
 
 # Select column layout
 select-column-layout:
   mod: mod1
-  key: f
+  key: '3'
+
+select-row-layout:
+  mod: mod1
+  key: '0'
+
+select-two-pane-layout:
+  mod: mod1
+  key: '9'
 
 # Move the currently focused window to the space to the left.
 throw-space-left:
@@ -259,7 +261,7 @@ display-current-layout:
 
 # Turn on or off tiling entirely.
 toggle-tiling:
-  mod: mod1
+  mod: mod2
   key: t
 
 # Rerun the current layout's algorithm.
@@ -289,7 +291,7 @@ focus-follows-mouse: false
 mouse-swaps-windows: false
 
 # true if changing the frame of a window with the mouse should update the layout to accommodate the change (default false). Note that not all layouts will be able to respond to the change.
-mouse-resizes-windows: true
+mouse-resizes-windows: false
 
 # ===== FLOATING ===== #
 
@@ -303,22 +305,32 @@ floating-is-blacklist: false
 floating: [
   com.apple.Notes,
   com.apple.Safari,
+  com.apple.reminders,
+  com.apple.Music,
+  com.apple.stocks,
   com.microsoft.Word,
   com.microsoft.Excel,
   com.microsoft.Outlook,
   com.microsoft.VSCode,
   com.microsoft.VSCodeInsiders,
+  net.whatsapp.WhatsApp,
   md.obsidian,
-  io.alacritty,
+  org.alacritty,
   io.zathura, # custom made bundle identifier for zathura
   # org.pwmt.zathura, # official bundle identifier for zathura, but doesn't work
-  org.mozilla.firefox
+  org.mozilla.firefox,
+  us.zoom.xos,
+  com.jetbrains.intellij,
+  com.toggl.daneel,
+  com.rstudio.desktop,
+  org.libreoffice.script,
+  org.zotero.zotero
 ]
 
 # ===== DEBUG ===== #
 
 # true to display some optional debug information in the layout HUD (default false).
-debug-layout-info: true
+debug-layout-info: false
 
 # true to get updates to beta versions of the software (default false).
 use-canary-build: false
