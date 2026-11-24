@@ -1,3 +1,8 @@
-#!/usr/bin/env sh
+#!/bin/bash
+#
+# Highlights the focused space. sketchybar passes $SELECTED (on/off) to every
+# space item on space_change.
 
-sketchybar --set $NAME background.drawing=$SELECTED
+source "${CONFIG_DIR:-$HOME/.config/sketchybar}/env.sh"
+
+sketchybar --set "$NAME" background.drawing="${SELECTED:-off}"

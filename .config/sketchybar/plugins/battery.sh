@@ -1,38 +1,43 @@
-#!/usr/bin/env sh
+#!/bin/bash
+#
+# Battery level and power state. Hidden on Macs without a battery.
+# Events: power_source_change, system_woke (+ a 60s poll for the level).
 
-BATT_PERCENT=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
-CHARGING=$(pmset -g batt | grep 'AC Power')
+source "${CONFIG_DIR:-$HOME/.config/sketchybar}/env.sh"
 
-# Nordic Theme inspired colors
-GREEN=0xffa3be8c
-ORANGE=0xffd08770
-RED=0xffbf616a
+BATT="$(pmset -g batt)"
+PERCENT="$(printf '%s\n' "$BATT" | grep -Eo '[0-9]+%' | head -n 1 | tr -d '%')"
 
-if [[ $CHARGING != "" ]]; then
-  ICON=""
-  sketchybar -m --set ${NAME} \
-    icon=$ICON \
-    icon.color=$GREEN \
-    label=$(printf "${BATT_PERCENT}%%")
+if [ -z "$PERCENT" ]; then
+  sketchybar --set "$NAME" drawing=off
   exit 0
 fi
 
-case ${BATT_PERCENT} in
-  100)    ICON="" && COLOR=$GREEN  ;;
-  9[0-9]) ICON="" && COLOR=$GREEN  ;;
-  8[0-9]) ICON="" && COLOR=$GREEN  ;;
-  7[0-9]) ICON="" && COLOR=$GREEN  ;;
-  6[0-9]) ICON="" && COLOR=$GREEN  ;;
-  5[0-9]) ICON="" && COLOR=$GREEN  ;;
-  4[0-9]) ICON="" && COLOR=$ORANGE ;;
-  3[0-9]) ICON="" && COLOR=$ORANGE ;;
-  2[0-9]) ICON="" && COLOR=$ORANGE ;;
-  1[0-9]) ICON="" && COLOR=$RED    ;;
-  [0-9])  ICON="" && COLOR=$RED    ;;
-  *) ICON=""
-esac
+# Same thresholds and colors as before.
+if   [ "$PERCENT" -ge 50 ]; then COLOR=$GREEN
+elif [ "$PERCENT" -ge 20 ]; then COLOR=$ORANGE
+else                             COLOR=$RED
+fi
 
-sketchybar -m --set ${NAME}\
-  icon=$ICON \
-  icon.color=$COLOR \
-  label=$(printf "${BATT_PERCENT}%%")
+if   [ "$PERCENT" -ge 80 ]; then ICON=$ICON_BATTERY_100
+elif [ "$PERCENT" -ge 60 ]; then ICON=$ICON_BATTERY_75
+elif [ "$PERCENT" -ge 40 ]; then ICON=$ICON_BATTERY_50
+elif [ "$PERCENT" -ge 15 ]; then ICON=$ICON_BATTERY_25
+else                             ICON=$ICON_BATTERY_0
+fi
+
+# On AC power: a bolt while charging, a plug while the charge is held (full,
+# optimised charging, or a charge limit). "; discharging" doesn't match.
+if printf '%s\n' "$BATT" | grep -q "AC Power"; then
+  COLOR=$GREEN
+  if printf '%s\n' "$BATT" | grep -Eq '; (charging|finishing charge)'; then
+    ICON=$ICON_BATTERY_CHARGING
+  else
+    ICON=$ICON_BATTERY_PLUGGED
+  fi
+fi
+
+sketchybar --set "$NAME" drawing=on            \
+                         icon="$ICON"          \
+                         icon.color="$COLOR"   \
+                         label="${PERCENT}%"

@@ -1,3 +1,7 @@
-#!/usr/bin/env sh
+#!/bin/bash
+#
+# Weekday, date and time, e.g. "Tue 24/11 17:45".
 
-sketchybar --set $NAME label="$(date '+%d/%m %H:%M')"
+source "${CONFIG_DIR:-$HOME/.config/sketchybar}/env.sh"
+
+sketchybar --set "$NAME" label="$(date '+%a %d/%m %H:%M')"
