@@ -2,8 +2,8 @@ return {
     'voldikss/vim-floaterm',
     cmd = { 'FloatermToggle', 'FloatermNew' },
     keys = {
-        { '<C-p>', '<Cmd>FloatermToggle<CR>',             desc = 'Toggle floaterm' },
-        { '<C-p>', '<C-\\><C-n><Cmd>FloatermToggle<CR>', mode = 't', desc = 'Toggle floaterm' },
+        { '<leader>p', '<Cmd>FloatermToggle<CR>',             desc = 'Toggle floaterm' },
+        { '<leader>p', '<C-\\><C-n><Cmd>FloatermToggle<CR>', mode = 't', desc = 'Toggle floaterm' },
     },
     init = function()
         vim.g.floaterm_width     = 0.8
