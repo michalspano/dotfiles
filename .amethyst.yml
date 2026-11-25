@@ -27,8 +27,8 @@ new-windows-to-main: false
 # true to automatically move to a space when throwing a window to it (default true).
 follow-space-thrown-windows: true
 
-# disable screen padding on in-built display
-disable-screen-padding-on-inbuilt: false
+# true to disable screen padding on in-built display (default false).
+disable-padding-on-builtin-display: false
 
 # Boolean flag for whether or not to set window margins if there is only one window on the screen, assuming window margins are enabled (default false).
 smart-window-margins: true
@@ -291,7 +291,7 @@ focus-follows-mouse: false
 mouse-swaps-windows: false
 
 # true if changing the frame of a window with the mouse should update the layout to accommodate the change (default false). Note that not all layouts will be able to respond to the change.
-mouse-resizes-windows: false
+mouse-resizes-windows: true
 
 # ===== FLOATING ===== #
 
